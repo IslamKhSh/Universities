@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="university"
+            type="com.xische.universities.feature.common.model.University" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="24dp">
+
+        <ImageView
+            android:id="@+id/img_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="6dp"
+            android:src="@drawable/ic_baseline_autorenew_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="6dp"
+            android:text="@{university.name}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_refresh"
+            tools:text="University Title" />
+
+        <TextView
+            android:id="@+id/tv_state"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:text="@{university.state}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintEnd_toEndOf="@id/tv_title"
+            app:layout_constraintStart_toStartOf="@id/tv_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            tools:text="University State" />
+
+        <TextView
+            android:id="@+id/tv_country"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="12dp"
+            android:text="@{university.country}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintEnd_toStartOf="@id/tv_country_code"
+            app:layout_constraintStart_toStartOf="@id/tv_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_state"
+            tools:text="Country" />
+
+        <TextView
+            android:id="@+id/tv_country_code"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{university.countryCode}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintEnd_toEndOf="@id/tv_title"
+            app:layout_constraintTop_toTopOf="@id/tv_country"
+            tools:text="Country Code" />
+
+        <TextView
+            android:id="@+id/tv_web_page"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:text="@{university.webPage}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintEnd_toEndOf="@id/tv_country_code"
+            app:layout_constraintStart_toStartOf="@id/tv_country"
+            app:layout_constraintTop_toBottomOf="@id/tv_country"
+            tools:text="Web Page" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

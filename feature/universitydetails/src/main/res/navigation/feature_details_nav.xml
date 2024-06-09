@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/feature_details_nav"
+    app:startDestination="@id/detailsFragment">
+
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.xische.universities.feature.universitydetails.presentation.universityDetails.DetailsFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_details" >
+
+        <argument
+            android:name="university"
+            app:argType="com.xische.universities.feature.common.model.University" />
+    </fragment>
+
+</navigation>

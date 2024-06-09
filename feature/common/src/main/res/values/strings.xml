@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Universities</string>
+
+    <string name="details_fragment_deeplink">universities://univeristiesdetails/detailsFragment</string>
+
+    <string name="retry">Retry</string>
+    <string name="something_wrong">Something Went Wrong</string>
+</resources>

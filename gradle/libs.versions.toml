@@ -1,0 +1,71 @@
+[versions]
+androidGradlePlugin = "8.3.2"
+kotlin = "2.0.0"
+ksp = "2.0.0-1.0.22"
+androidxCore = "1.13.1"
+androidxLifecycle = "2.8.1"
+navigation = "2.7.7"
+coroutines = "1.8.1"
+hilt = "2.49"
+retrofit = "2.11.0"
+okhttpBom = "4.12.0"
+junit5 = "5.10.2"
+mockk = "1.13.10"
+appCompat ="1.7.0"
+fragment ="1.7.1"
+activity ="1.9.0"
+constraintlayout = "2.1.4"
+material-component = "1.12.0"
+kluent = "1.72"
+roomDB = "2.6.1"
+
+[libraries]
+androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "androidxCore" }
+lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "androidxLifecycle" }
+viewModel = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "androidxLifecycle" }
+liveData = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "androidxLifecycle" }
+hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
+hilt-compiler = "com.google.dagger:hilt-compiler:2.49"
+navigation-component = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "navigation" }
+navigation-component-ui = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navigation" }
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+retrofit-kotlinx-serialization = { module = "com.squareup.retrofit2:converter-kotlinx-serialization", version.ref = "retrofit" }
+okhttp-bom = { group = "com.squareup.okhttp3", name = "okhttp-bom", version.ref = "okhttpBom" }
+okhttp-logging-interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor" }
+kotlinx-serialization = "org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.1"
+appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appCompat" }
+fragment-ktx = { module = "androidx.fragment:fragment-ktx", version.ref = "fragment" }
+activity-ktx = { module = "androidx.activity:activity-ktx", version.ref = "activity" }
+constraintLayout= { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraintlayout" }
+material-component= { module = "com.google.android.material:material", version.ref = "material-component" }
+room-run-time = { module = "androidx.room:room-runtime", version.ref = "roomDB" }
+room-ktx = { module = "androidx.room:room-ktx", version.ref = "roomDB" }
+room-compiler = { module = "androidx.room:room-compiler", version.ref = "roomDB" }
+
+junit = { module = "org.junit:junit-bom", version.ref = "junit5" }
+junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit5" }
+mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
+kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutines" }
+kluent-core = { module = "org.amshove.kluent:kluent", version.ref = "kluent" }
+
+[bundles]
+lifecycle = ["lifecycle-runtime-ktx", "liveData", "viewModel"]
+navigationComponent = ["navigation-component", "navigation-component-ui"]
+androidKtx = ["activity-ktx", "appcompat", "fragment-ktx", "androidx-core-ktx"]
+basicUi = ["constraintLayout", "material-component"]
+retrofit = ["kotlinx-serialization", "okhttp-logging-interceptor", "retrofit", "retrofit-kotlinx-serialization"]
+room = ["room-run-time", "room-ktx"]
+unitTest = ["kotlinx-coroutines-test", "junit-jupiter", "kluent-core", "kotlin-test-junit", "mockk"]
+
+[plugins]
+androidApp = { id = "com.android.application", version.ref = "androidGradlePlugin" }
+androidLibrary = { id = "com.android.library", version.ref = "androidGradlePlugin" }
+kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlinParcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+kotlinxSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+safeArgs = { id = "androidx.navigation.safeargs.kotlin", version.ref = "navigation" }
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+detekt = "io.gitlab.arturbosch.detekt:1.23.6"
+
